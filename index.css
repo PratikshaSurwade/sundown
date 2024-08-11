@@ -1,0 +1,500 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html ,body{
+    height: 100%;
+    width: 100%;
+    font-family: Arial,sans-serif;
+}
+
+
+.page1{
+    min-height: 100vh;
+    width: 100%;
+    padding: 2rem;
+    background-color: #efeae3;
+    position: relative;
+    z-index: 5;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .NavItems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    color: #706f6f;
+    
+}
+
+nav .NavItems h4{
+    color: rgba(11, 5, 0, 0.2);
+    padding: 1rem 1.2rem;                 /*Upar niche 1rem , Right Left 1.2rem */
+    border: solid rgba(11, 5, 0, 0.2) 2px;
+    border-radius: 5rem;
+    position: relative;
+    transition: 0.4s all ease;
+
+    overflow: hidden;
+}
+nav .NavItems h4 a{
+    text-decoration: none;
+    color: rgba(11, 5, 0, 0.2);
+    z-index: 5;
+    position: relative;
+}
+
+nav .NavItems h4::after{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: black;
+    left: 0;
+    top: 100%;
+    transition: 0.4s all ease;
+}
+nav .NavItems h4:hover a{
+    color: #fff;
+}
+nav .NavItems h4:hover::after{
+    top: 0;
+    border-radius: 0;
+}
+
+.Titlepage{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    z-index: 20;
+}
+.Titlepage p{
+    font-size: 1.8rem;
+    width: 30vw;
+    line-height: 2rem;
+    font-weight: bold;
+}
+
+.Titlepage h1{
+    font-size: 11rem;
+    text-align: end;
+    line-height: 8.5rem;
+    z-index: 20;
+
+}
+
+/*                     Blur  Effect                            */
+#hero-shape {
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 65vh;
+    z-index: 2;
+}
+
+#hero-1 {
+    background-color: #FE320A;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(10px);
+    position: absolute;
+}
+
+#hero-2 {
+    background: linear-gradient(#FE320A, #fe3f0a);
+
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(25px);
+}
+
+#hero-3 {
+    background: linear-gradient(#FE320A, #fe3f0a);
+    height: 30vw;
+    position: absolute;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(25px);
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime1 {
+    from {
+        transform: translate(55%, -3%);
+    }
+
+    to {
+        transform: translate(0%, 10%);
+    }
+}
+
+@keyframes anime2 {
+    from {
+        transform: translate(5%, -5%);
+    }
+
+    to {
+        transform: translate(-20%, 30%);
+    }
+}
+
+.page1 video{
+    width: 100%;
+    margin-top: 5vh;
+    border-radius: 20px;
+    position: relative;             /*Position relative is required for Z-Index*/
+    z-index: 20;
+}
+
+/*                     Moving Items                            */
+
+.movingItems{
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: larger;
+    font-size: xx-large;
+}
+
+.circle{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: orangered;
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0.5vw 2vw;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.movingItems::-webkit-scrollbar {
+    display: none;
+}
+
+.movingItems h1{
+    display: inline-block;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+.page2{
+    min-height: 100vh;
+    width: 100%;
+    padding: 1.5rem 1.5rem;
+    position: relative;
+    z-index: 20;
+    background-color: #efeae3;
+}
+
+.page2-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25vh;
+
+}
+
+.page2-bottom h1{
+    /* width: 40vw; */
+    font-size: 3.1rem;
+    z-index: 20;
+}
+
+.right{
+    width: 18rem;
+    height: fit-content;
+    margin-top: 5rem;
+}
+.right img{
+    width: 18rem;
+    height: 13rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.right p{
+    margin-top: 2rem;
+    line-height: 1.3rem;
+    color: #706f6f;
+}
+
+.page2 .blurr2{
+    height: 32vw;
+    width: 32vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, #ff2d03, #ff5c0b);
+    /* background: linear-gradient(to top right,red,blue); */
+    top: 58%;
+    left: 25%;
+    filter: blur(20px);
+    animation-name: gooey;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes gooey {
+    from {
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(0);
+    }
+
+    to {
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
+
+
+.page3{ 
+    min-height: 120vh;
+    width: 100%;
+    padding-top: 10rem;
+    background-color: #efeae3;
+    position: relative;
+    z-index: 20;
+}
+
+.page3 .SingleProject{
+    border-bottom: black 2px solid;
+    position: relative;
+    height: fit-content;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.page3 .overLay{
+    content: "";
+    position: absolute;
+    background-color: orangered;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0%;
+    transition: all ease 0.25s;
+    z-index: 1;
+}
+
+.SingleProject h1{
+    font-size: 3rem;
+    position: relative;              /*Position relative is required for Z-Index*/
+    z-index: 25;
+}
+
+.page3 .SingleProject:hover{
+    color: white;
+}
+
+.page3 .SingleProject:hover .overLay{
+    top: 0;
+}
+
+.fixedImage{
+    width: 22rem;
+    height: 28rem;
+    background-color: aquamarine;
+    position: fixed;
+    border-radius: 1rem;
+    top: 25%;
+    right: 30%;
+    display: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index:30;
+}
+
+/* Rounded Div */
+
+.roundedDiv{
+    width: 100%;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100vh;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -86.666%);
+    z-index: 1;
+    background-color: #efeae3;
+    animation: round linear;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100%;
+}
+
+@keyframes round {
+  from{
+    border-radius: 50%;
+  }
+  to{
+    border-radius: 0;
+  }
+}
+
+/* Main Div styling for aapearance */
+
+.main{
+    background-color: #000;
+    height: 100vh;
+}
+
+.page4{
+    height: 100vh;
+    background: transparent;
+}
+#footer {
+    position: fixed;
+    height: 105vh;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    /* z-index: 9; */
+    bottom: 0;
+    display: flex;
+    /* align-items: flex-end; */
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 1vw 3vw;
+}
+
+#footer h1 {
+    font-size: 20vw;
+}
+
+#footer-div {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top right, #ff2d03, #ff5c0b);
+    filter: blur(20px);
+    animation-name: footerAnime;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+#footer-div1 {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top right, #ff2d03, #ff5c0b);
+    filter: blur(20px);
+    transform: translateZ(30deg);
+
+    animation-name: footerAnime;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes footerAnime {
+    from {
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(0);
+    }
+
+    to {
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
+#footer-bottom {
+    border-top: 1px solid #dadada;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loader{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader>h1{
+    background: linear-gradient(to right, red,yellow,orange);
+    -webkit-background-clip: text;
+    font-size: 4vw;
+    color: transparent;
+    position: absolute;
+    opacity: 0;
+    animation: loaderAnime;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+
+}
+.loader>h1:nth-child(2){
+    animation-delay: 2s;
+}
+.loader>h1:nth-child(3){
+    animation-delay: 3s;
+}
+@keyframes loaderAnime {
+  0%{
+    opacity: 0;
+  }10%{
+    opacity: 1;
+  }90%{
+    opacity: 1;
+  }100%{
+    opacity: 0;
+  }
+}

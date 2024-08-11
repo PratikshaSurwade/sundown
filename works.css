@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*::selection{
+    color: #ff2d03;
+}
+
+html ,body{
+    height: 100%;
+    width: 100%;
+    font-family: Arial,sans-serif;
+    /* background-color: #efeae3; */
+}
+
+.subpage1{
+    height: 100vh;
+    width: 100%;
+}
+
+.SecondPage{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+.SecondPage h1{
+    font-size: 11rem;
+    margin-top: 30vh;
+}
+
+.subBlur{
+    height: 50vw;
+    width: 50vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, #ff2d03, #ff5c0b);
+    top: 10%;
+    left: 20%;
+    filter: blur(20px);
+    animation-name: gooey;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.subNavBar{
+    display: flex;
+    gap: 3rem;
+    border: solid rgba(11, 5, 0, 0.2) 2px;
+    border-radius: 15rem;
+    padding: 1rem;
+    display: inline-flex;
+}
+
+.subNavBar a{
+    color: rgba(11, 5, 0, 0.2);
+    text-decoration: none;
+}
+
+.subNavBar a:hover{
+    color: black;
+}
+
+.columnOne{
+    /* flex-wrap: wrap; */
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    overflow: hidden;
+
+}
+
+.columnOne img{
+    flex: 0 auto;
+    width: 33.33%;
+    padding: 0;
+    overflow: hidden;
+    /* padding: 3rem; */
+}
+
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Adjust the gap between images as needed */
+    padding: 20px; /* Optional padding around the grid */
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure images fit within their grid cells */
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two images per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* One image per row on very small screens */
+    }
+}
+
+.subPage2{
+    height: 100vh;
+    /* width: 100%; */
+    background-color: #efeae3;
+}
+
+.subPage3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+}
+
+.subPage4{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+}
+
+.subPage5{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+}
