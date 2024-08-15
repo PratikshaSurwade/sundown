@@ -33,7 +33,6 @@ nav .NavItems{
     justify-content: center;
     gap: 3rem;
     color: #706f6f;
-    
 }
 
 nav .NavItems h4{
@@ -43,9 +42,9 @@ nav .NavItems h4{
     border-radius: 5rem;
     position: relative;
     transition: 0.4s all ease;
-
     overflow: hidden;
 }
+
 nav .NavItems h4 a{
     text-decoration: none;
     color: rgba(11, 5, 0, 0.2);
@@ -64,9 +63,11 @@ nav .NavItems h4::after{
     top: 100%;
     transition: 0.4s all ease;
 }
+
 nav .NavItems h4:hover a{
     color: #fff;
 }
+
 nav .NavItems h4:hover::after{
     top: 0;
     border-radius: 0;
@@ -80,6 +81,7 @@ nav .NavItems h4:hover::after{
     justify-content: space-between;
     z-index: 20;
 }
+
 .Titlepage p{
     font-size: 1.8rem;
     width: 30vw;
@@ -92,7 +94,6 @@ nav .NavItems h4:hover::after{
     text-align: end;
     line-height: 8.5rem;
     z-index: 20;
-
 }
 
 /*                     Blur  Effect                            */
@@ -117,7 +118,6 @@ nav .NavItems h4:hover::after{
 
 #hero-2 {
     background: linear-gradient(#FE320A, #fe3f0a);
-
     height: 30vw;
     width: 30vw;
     border-radius: 50%;

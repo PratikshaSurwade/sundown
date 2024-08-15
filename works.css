@@ -31,6 +31,16 @@ html ,body{
 .SecondPage h1{
     font-size: 11rem;
     margin-top: 30vh;
+    animation: entryWords 1s ease;
+}
+
+@keyframes entryWords {
+    0%{
+        bottom: -20rem;
+    }
+    100%{
+        bottom: 0;
+    }
 }
 
 .subBlur{
@@ -66,30 +76,6 @@ html ,body{
 .subNavBar a:hover{
     color: black;
 }
-
-.columnOne{
-    /* flex-wrap: wrap; */
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-columns: 1fr;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    overflow: hidden;
-
-}
-
-.columnOne img{
-    flex: 0 auto;
-    width: 33.33%;
-    padding: 0;
-    overflow: hidden;
-    /* padding: 3rem; */
-}
-
 
 .image-grid {
     display: grid;
