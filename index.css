@@ -189,10 +189,6 @@ nav .NavItems h4:hover::after{
     display: inline-block;
     white-space: nowrap;
     margin: 0.5vw 2vw;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
 }
 
 .con{
@@ -345,10 +341,11 @@ nav .NavItems h4:hover::after{
     border-radius: 1rem;
     top: 25%;
     right: 30%;
-    display: none;
+    opacity: 0;
     background-repeat: no-repeat;
     background-position: center;
     z-index:30;
+    pointer-events: none;
 }
 
 /* Rounded Div */
@@ -376,6 +373,52 @@ nav .NavItems h4:hover::after{
   to{
     border-radius: 0;
   }
+}
+
+.DesignPlate{    
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+    height: 70vh;
+    margin: 3rem auto;
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.descripTion{
+    margin-left: 5rem;
+}
+
+.headingName{
+    font-weight: 5;
+    color:grey;
+    border-left: solid grey 6px;
+    padding-left: 1rem;    
+    font-weight: 700;
+    font-size: xxx-large;
+}
+
+.active{
+    border-left: solid orangered 6px;
+    color: #fff;
+}
+
+.headingDescription{
+    color: #efeae3;
+    margin-top: 2rem;
+}
+
+.headingImage{
+    width: 150vw;
+    height: 70vh;
+    border-radius: 1rem;
+    background-image: url(https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15e1_Project-p-1080.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s;
 }
 
 /* Main Div styling for aapearance */
