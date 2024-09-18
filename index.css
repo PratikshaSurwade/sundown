@@ -220,7 +220,7 @@ nav .NavItems h4:hover::after{
 
 
 .page2{
-    min-height: 100vh;
+    min-height: 110vh;
     width: 100%;
     padding: 1.5rem 1.5rem;
     position: relative;
@@ -266,7 +266,7 @@ nav .NavItems h4:hover::after{
     border-radius: 50%;
     background: linear-gradient(to top right, #ff2d03, #ff5c0b);
     /* background: linear-gradient(to top right,red,blue); */
-    top: 58%;
+    top: 40%;
     left: 25%;
     filter: blur(20px);
     animation-name: gooey;
